@@ -1,12 +1,6 @@
 {
 .appVersion = "3436";
 .formatVersion = 3;
-DisplayStrings = (
-"/st.0/st.1/st.3/st.4/st.5/st.6",
-"",
-"994",
-""
-);
 date = "2026-07-17 13:07:30 +0000";
 familyName = "RR mod7";
 featurePrefixes = (
