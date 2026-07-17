@@ -1,0 +1,1787 @@
+{
+.appVersion = "3436";
+.formatVersion = 3;
+DisplayStrings = (
+"/st.0/st.1/st.3/st.4/st.5/st.6",
+"",
+"994",
+""
+);
+date = "2026-07-17 13:07:30 +0000";
+familyName = "RR mod7";
+featurePrefixes = (
+{
+automatic = 1;
+code = "languagesystem DFLT dflt;
+";
+name = Languagesystems;
+},
+{
+code = "@digit = [zero one two three four five six seven eight nine];
+@state = [st.0 st.1 st.2 st.3 st.4 st.5 st.6];
+
+lookup toState {
+  sub zero by st.0;
+  sub one by st.1;
+  sub two by st.2;
+  sub three by st.3;
+  sub four by st.4;
+  sub five by st.5;
+  sub six by st.6;
+  sub seven by st.0;
+  sub eight by st.1;
+  sub nine by st.2;
+} toState;
+
+lookup calcState {
+  ignore sub [@digit @state] @digit';
+  sub @digit' lookup toState @digit;
+} calcState;
+
+lookup step1 {
+  sub st.0 zero by st.0;
+  sub st.0 one by st.1;
+  sub st.0 two by st.2;
+  sub st.0 three by st.3;
+  sub st.0 four by st.4;
+  sub st.0 five by st.5;
+  sub st.0 six by st.6;
+  sub st.0 seven by st.0;
+  sub st.0 eight by st.1;
+  sub st.0 nine by st.2;
+  sub st.1 zero by st.3;
+  sub st.1 one by st.4;
+  sub st.1 two by st.5;
+  sub st.1 three by st.6;
+  sub st.1 four by st.0;
+  sub st.1 five by st.1;
+  sub st.1 six by st.2;
+  sub st.1 seven by st.3;
+  sub st.1 eight by st.4;
+  sub st.1 nine by st.5;
+  sub st.2 zero by st.6;
+  sub st.2 one by st.0;
+  sub st.2 two by st.1;
+  sub st.2 three by st.2;
+  sub st.2 four by st.3;
+  sub st.2 five by st.4;
+  sub st.2 six by st.5;
+  sub st.2 seven by st.6;
+  sub st.2 eight by st.0;
+  sub st.2 nine by st.1;
+  sub st.3 zero by st.2;
+  sub st.3 one by st.3;
+  sub st.3 two by st.4;
+  sub st.3 three by st.5;
+  sub st.3 four by st.6;
+  sub st.3 five by st.0;
+  sub st.3 six by st.1;
+  sub st.3 seven by st.2;
+  sub st.3 eight by st.3;
+  sub st.3 nine by st.4;
+  sub st.4 zero by st.5;
+  sub st.4 one by st.6;
+  sub st.4 two by st.0;
+  sub st.4 three by st.1;
+  sub st.4 four by st.2;
+  sub st.4 five by st.3;
+  sub st.4 six by st.4;
+  sub st.4 seven by st.5;
+  sub st.4 eight by st.6;
+  sub st.4 nine by st.0;
+  sub st.5 zero by st.1;
+  sub st.5 one by st.2;
+  sub st.5 two by st.3;
+  sub st.5 three by st.4;
+  sub st.5 four by st.5;
+  sub st.5 five by st.6;
+  sub st.5 six by st.0;
+  sub st.5 seven by st.1;
+  sub st.5 eight by st.2;
+  sub st.5 nine by st.3;
+  sub st.6 zero by st.4;
+  sub st.6 one by st.5;
+  sub st.6 two by st.6;
+  sub st.6 three by st.0;
+  sub st.6 four by st.1;
+  sub st.6 five by st.2;
+  sub st.6 six by st.3;
+  sub st.6 seven by st.4;
+  sub st.6 eight by st.5;
+  sub st.6 nine by st.6;
+} step1;
+
+lookup step2 {
+  sub st.0 zero by st.0;
+  sub st.0 one by st.1;
+  sub st.0 two by st.2;
+  sub st.0 three by st.3;
+  sub st.0 four by st.4;
+  sub st.0 five by st.5;
+  sub st.0 six by st.6;
+  sub st.0 seven by st.0;
+  sub st.0 eight by st.1;
+  sub st.0 nine by st.2;
+  sub st.1 zero by st.3;
+  sub st.1 one by st.4;
+  sub st.1 two by st.5;
+  sub st.1 three by st.6;
+  sub st.1 four by st.0;
+  sub st.1 five by st.1;
+  sub st.1 six by st.2;
+  sub st.1 seven by st.3;
+  sub st.1 eight by st.4;
+  sub st.1 nine by st.5;
+  sub st.2 zero by st.6;
+  sub st.2 one by st.0;
+  sub st.2 two by st.1;
+  sub st.2 three by st.2;
+  sub st.2 four by st.3;
+  sub st.2 five by st.4;
+  sub st.2 six by st.5;
+  sub st.2 seven by st.6;
+  sub st.2 eight by st.0;
+  sub st.2 nine by st.1;
+  sub st.3 zero by st.2;
+  sub st.3 one by st.3;
+  sub st.3 two by st.4;
+  sub st.3 three by st.5;
+  sub st.3 four by st.6;
+  sub st.3 five by st.0;
+  sub st.3 six by st.1;
+  sub st.3 seven by st.2;
+  sub st.3 eight by st.3;
+  sub st.3 nine by st.4;
+  sub st.4 zero by st.5;
+  sub st.4 one by st.6;
+  sub st.4 two by st.0;
+  sub st.4 three by st.1;
+  sub st.4 four by st.2;
+  sub st.4 five by st.3;
+  sub st.4 six by st.4;
+  sub st.4 seven by st.5;
+  sub st.4 eight by st.6;
+  sub st.4 nine by st.0;
+  sub st.5 zero by st.1;
+  sub st.5 one by st.2;
+  sub st.5 two by st.3;
+  sub st.5 three by st.4;
+  sub st.5 four by st.5;
+  sub st.5 five by st.6;
+  sub st.5 six by st.0;
+  sub st.5 seven by st.1;
+  sub st.5 eight by st.2;
+  sub st.5 nine by st.3;
+  sub st.6 zero by st.4;
+  sub st.6 one by st.5;
+  sub st.6 two by st.6;
+  sub st.6 three by st.0;
+  sub st.6 four by st.1;
+  sub st.6 five by st.2;
+  sub st.6 six by st.3;
+  sub st.6 seven by st.4;
+  sub st.6 eight by st.5;
+  sub st.6 nine by st.6;
+} step2;
+
+lookup step3 {
+  sub st.0 zero by st.0;
+  sub st.0 one by st.1;
+  sub st.0 two by st.2;
+  sub st.0 three by st.3;
+  sub st.0 four by st.4;
+  sub st.0 five by st.5;
+  sub st.0 six by st.6;
+  sub st.0 seven by st.0;
+  sub st.0 eight by st.1;
+  sub st.0 nine by st.2;
+  sub st.1 zero by st.3;
+  sub st.1 one by st.4;
+  sub st.1 two by st.5;
+  sub st.1 three by st.6;
+  sub st.1 four by st.0;
+  sub st.1 five by st.1;
+  sub st.1 six by st.2;
+  sub st.1 seven by st.3;
+  sub st.1 eight by st.4;
+  sub st.1 nine by st.5;
+  sub st.2 zero by st.6;
+  sub st.2 one by st.0;
+  sub st.2 two by st.1;
+  sub st.2 three by st.2;
+  sub st.2 four by st.3;
+  sub st.2 five by st.4;
+  sub st.2 six by st.5;
+  sub st.2 seven by st.6;
+  sub st.2 eight by st.0;
+  sub st.2 nine by st.1;
+  sub st.3 zero by st.2;
+  sub st.3 one by st.3;
+  sub st.3 two by st.4;
+  sub st.3 three by st.5;
+  sub st.3 four by st.6;
+  sub st.3 five by st.0;
+  sub st.3 six by st.1;
+  sub st.3 seven by st.2;
+  sub st.3 eight by st.3;
+  sub st.3 nine by st.4;
+  sub st.4 zero by st.5;
+  sub st.4 one by st.6;
+  sub st.4 two by st.0;
+  sub st.4 three by st.1;
+  sub st.4 four by st.2;
+  sub st.4 five by st.3;
+  sub st.4 six by st.4;
+  sub st.4 seven by st.5;
+  sub st.4 eight by st.6;
+  sub st.4 nine by st.0;
+  sub st.5 zero by st.1;
+  sub st.5 one by st.2;
+  sub st.5 two by st.3;
+  sub st.5 three by st.4;
+  sub st.5 four by st.5;
+  sub st.5 five by st.6;
+  sub st.5 six by st.0;
+  sub st.5 seven by st.1;
+  sub st.5 eight by st.2;
+  sub st.5 nine by st.3;
+  sub st.6 zero by st.4;
+  sub st.6 one by st.5;
+  sub st.6 two by st.6;
+  sub st.6 three by st.0;
+  sub st.6 four by st.1;
+  sub st.6 five by st.2;
+  sub st.6 six by st.3;
+  sub st.6 seven by st.4;
+  sub st.6 eight by st.5;
+  sub st.6 nine by st.6;
+} step3;
+
+lookup step4 {
+  sub st.0 zero by st.0;
+  sub st.0 one by st.1;
+  sub st.0 two by st.2;
+  sub st.0 three by st.3;
+  sub st.0 four by st.4;
+  sub st.0 five by st.5;
+  sub st.0 six by st.6;
+  sub st.0 seven by st.0;
+  sub st.0 eight by st.1;
+  sub st.0 nine by st.2;
+  sub st.1 zero by st.3;
+  sub st.1 one by st.4;
+  sub st.1 two by st.5;
+  sub st.1 three by st.6;
+  sub st.1 four by st.0;
+  sub st.1 five by st.1;
+  sub st.1 six by st.2;
+  sub st.1 seven by st.3;
+  sub st.1 eight by st.4;
+  sub st.1 nine by st.5;
+  sub st.2 zero by st.6;
+  sub st.2 one by st.0;
+  sub st.2 two by st.1;
+  sub st.2 three by st.2;
+  sub st.2 four by st.3;
+  sub st.2 five by st.4;
+  sub st.2 six by st.5;
+  sub st.2 seven by st.6;
+  sub st.2 eight by st.0;
+  sub st.2 nine by st.1;
+  sub st.3 zero by st.2;
+  sub st.3 one by st.3;
+  sub st.3 two by st.4;
+  sub st.3 three by st.5;
+  sub st.3 four by st.6;
+  sub st.3 five by st.0;
+  sub st.3 six by st.1;
+  sub st.3 seven by st.2;
+  sub st.3 eight by st.3;
+  sub st.3 nine by st.4;
+  sub st.4 zero by st.5;
+  sub st.4 one by st.6;
+  sub st.4 two by st.0;
+  sub st.4 three by st.1;
+  sub st.4 four by st.2;
+  sub st.4 five by st.3;
+  sub st.4 six by st.4;
+  sub st.4 seven by st.5;
+  sub st.4 eight by st.6;
+  sub st.4 nine by st.0;
+  sub st.5 zero by st.1;
+  sub st.5 one by st.2;
+  sub st.5 two by st.3;
+  sub st.5 three by st.4;
+  sub st.5 four by st.5;
+  sub st.5 five by st.6;
+  sub st.5 six by st.0;
+  sub st.5 seven by st.1;
+  sub st.5 eight by st.2;
+  sub st.5 nine by st.3;
+  sub st.6 zero by st.4;
+  sub st.6 one by st.5;
+  sub st.6 two by st.6;
+  sub st.6 three by st.0;
+  sub st.6 four by st.1;
+  sub st.6 five by st.2;
+  sub st.6 six by st.3;
+  sub st.6 seven by st.4;
+  sub st.6 eight by st.5;
+  sub st.6 nine by st.6;
+} step4;
+
+lookup step5 {
+  sub st.0 zero by st.0;
+  sub st.0 one by st.1;
+  sub st.0 two by st.2;
+  sub st.0 three by st.3;
+  sub st.0 four by st.4;
+  sub st.0 five by st.5;
+  sub st.0 six by st.6;
+  sub st.0 seven by st.0;
+  sub st.0 eight by st.1;
+  sub st.0 nine by st.2;
+  sub st.1 zero by st.3;
+  sub st.1 one by st.4;
+  sub st.1 two by st.5;
+  sub st.1 three by st.6;
+  sub st.1 four by st.0;
+  sub st.1 five by st.1;
+  sub st.1 six by st.2;
+  sub st.1 seven by st.3;
+  sub st.1 eight by st.4;
+  sub st.1 nine by st.5;
+  sub st.2 zero by st.6;
+  sub st.2 one by st.0;
+  sub st.2 two by st.1;
+  sub st.2 three by st.2;
+  sub st.2 four by st.3;
+  sub st.2 five by st.4;
+  sub st.2 six by st.5;
+  sub st.2 seven by st.6;
+  sub st.2 eight by st.0;
+  sub st.2 nine by st.1;
+  sub st.3 zero by st.2;
+  sub st.3 one by st.3;
+  sub st.3 two by st.4;
+  sub st.3 three by st.5;
+  sub st.3 four by st.6;
+  sub st.3 five by st.0;
+  sub st.3 six by st.1;
+  sub st.3 seven by st.2;
+  sub st.3 eight by st.3;
+  sub st.3 nine by st.4;
+  sub st.4 zero by st.5;
+  sub st.4 one by st.6;
+  sub st.4 two by st.0;
+  sub st.4 three by st.1;
+  sub st.4 four by st.2;
+  sub st.4 five by st.3;
+  sub st.4 six by st.4;
+  sub st.4 seven by st.5;
+  sub st.4 eight by st.6;
+  sub st.4 nine by st.0;
+  sub st.5 zero by st.1;
+  sub st.5 one by st.2;
+  sub st.5 two by st.3;
+  sub st.5 three by st.4;
+  sub st.5 four by st.5;
+  sub st.5 five by st.6;
+  sub st.5 six by st.0;
+  sub st.5 seven by st.1;
+  sub st.5 eight by st.2;
+  sub st.5 nine by st.3;
+  sub st.6 zero by st.4;
+  sub st.6 one by st.5;
+  sub st.6 two by st.6;
+  sub st.6 three by st.0;
+  sub st.6 four by st.1;
+  sub st.6 five by st.2;
+  sub st.6 six by st.3;
+  sub st.6 seven by st.4;
+  sub st.6 eight by st.5;
+  sub st.6 nine by st.6;
+} step5;
+
+lookup step6 {
+  sub st.0 zero by st.0;
+  sub st.0 one by st.1;
+  sub st.0 two by st.2;
+  sub st.0 three by st.3;
+  sub st.0 four by st.4;
+  sub st.0 five by st.5;
+  sub st.0 six by st.6;
+  sub st.0 seven by st.0;
+  sub st.0 eight by st.1;
+  sub st.0 nine by st.2;
+  sub st.1 zero by st.3;
+  sub st.1 one by st.4;
+  sub st.1 two by st.5;
+  sub st.1 three by st.6;
+  sub st.1 four by st.0;
+  sub st.1 five by st.1;
+  sub st.1 six by st.2;
+  sub st.1 seven by st.3;
+  sub st.1 eight by st.4;
+  sub st.1 nine by st.5;
+  sub st.2 zero by st.6;
+  sub st.2 one by st.0;
+  sub st.2 two by st.1;
+  sub st.2 three by st.2;
+  sub st.2 four by st.3;
+  sub st.2 five by st.4;
+  sub st.2 six by st.5;
+  sub st.2 seven by st.6;
+  sub st.2 eight by st.0;
+  sub st.2 nine by st.1;
+  sub st.3 zero by st.2;
+  sub st.3 one by st.3;
+  sub st.3 two by st.4;
+  sub st.3 three by st.5;
+  sub st.3 four by st.6;
+  sub st.3 five by st.0;
+  sub st.3 six by st.1;
+  sub st.3 seven by st.2;
+  sub st.3 eight by st.3;
+  sub st.3 nine by st.4;
+  sub st.4 zero by st.5;
+  sub st.4 one by st.6;
+  sub st.4 two by st.0;
+  sub st.4 three by st.1;
+  sub st.4 four by st.2;
+  sub st.4 five by st.3;
+  sub st.4 six by st.4;
+  sub st.4 seven by st.5;
+  sub st.4 eight by st.6;
+  sub st.4 nine by st.0;
+  sub st.5 zero by st.1;
+  sub st.5 one by st.2;
+  sub st.5 two by st.3;
+  sub st.5 three by st.4;
+  sub st.5 four by st.5;
+  sub st.5 five by st.6;
+  sub st.5 six by st.0;
+  sub st.5 seven by st.1;
+  sub st.5 eight by st.2;
+  sub st.5 nine by st.3;
+  sub st.6 zero by st.4;
+  sub st.6 one by st.5;
+  sub st.6 two by st.6;
+  sub st.6 three by st.0;
+  sub st.6 four by st.1;
+  sub st.6 five by st.2;
+  sub st.6 six by st.3;
+  sub st.6 seven by st.4;
+  sub st.6 eight by st.5;
+  sub st.6 nine by st.6;
+} step6;
+
+lookup step7 {
+  sub st.0 zero by st.0;
+  sub st.0 one by st.1;
+  sub st.0 two by st.2;
+  sub st.0 three by st.3;
+  sub st.0 four by st.4;
+  sub st.0 five by st.5;
+  sub st.0 six by st.6;
+  sub st.0 seven by st.0;
+  sub st.0 eight by st.1;
+  sub st.0 nine by st.2;
+  sub st.1 zero by st.3;
+  sub st.1 one by st.4;
+  sub st.1 two by st.5;
+  sub st.1 three by st.6;
+  sub st.1 four by st.0;
+  sub st.1 five by st.1;
+  sub st.1 six by st.2;
+  sub st.1 seven by st.3;
+  sub st.1 eight by st.4;
+  sub st.1 nine by st.5;
+  sub st.2 zero by st.6;
+  sub st.2 one by st.0;
+  sub st.2 two by st.1;
+  sub st.2 three by st.2;
+  sub st.2 four by st.3;
+  sub st.2 five by st.4;
+  sub st.2 six by st.5;
+  sub st.2 seven by st.6;
+  sub st.2 eight by st.0;
+  sub st.2 nine by st.1;
+  sub st.3 zero by st.2;
+  sub st.3 one by st.3;
+  sub st.3 two by st.4;
+  sub st.3 three by st.5;
+  sub st.3 four by st.6;
+  sub st.3 five by st.0;
+  sub st.3 six by st.1;
+  sub st.3 seven by st.2;
+  sub st.3 eight by st.3;
+  sub st.3 nine by st.4;
+  sub st.4 zero by st.5;
+  sub st.4 one by st.6;
+  sub st.4 two by st.0;
+  sub st.4 three by st.1;
+  sub st.4 four by st.2;
+  sub st.4 five by st.3;
+  sub st.4 six by st.4;
+  sub st.4 seven by st.5;
+  sub st.4 eight by st.6;
+  sub st.4 nine by st.0;
+  sub st.5 zero by st.1;
+  sub st.5 one by st.2;
+  sub st.5 two by st.3;
+  sub st.5 three by st.4;
+  sub st.5 four by st.5;
+  sub st.5 five by st.6;
+  sub st.5 six by st.0;
+  sub st.5 seven by st.1;
+  sub st.5 eight by st.2;
+  sub st.5 nine by st.3;
+  sub st.6 zero by st.4;
+  sub st.6 one by st.5;
+  sub st.6 two by st.6;
+  sub st.6 three by st.0;
+  sub st.6 four by st.1;
+  sub st.6 five by st.2;
+  sub st.6 six by st.3;
+  sub st.6 seven by st.4;
+  sub st.6 eight by st.5;
+  sub st.6 nine by st.6;
+} step7;
+
+lookup step8 {
+  sub st.0 zero by st.0;
+  sub st.0 one by st.1;
+  sub st.0 two by st.2;
+  sub st.0 three by st.3;
+  sub st.0 four by st.4;
+  sub st.0 five by st.5;
+  sub st.0 six by st.6;
+  sub st.0 seven by st.0;
+  sub st.0 eight by st.1;
+  sub st.0 nine by st.2;
+  sub st.1 zero by st.3;
+  sub st.1 one by st.4;
+  sub st.1 two by st.5;
+  sub st.1 three by st.6;
+  sub st.1 four by st.0;
+  sub st.1 five by st.1;
+  sub st.1 six by st.2;
+  sub st.1 seven by st.3;
+  sub st.1 eight by st.4;
+  sub st.1 nine by st.5;
+  sub st.2 zero by st.6;
+  sub st.2 one by st.0;
+  sub st.2 two by st.1;
+  sub st.2 three by st.2;
+  sub st.2 four by st.3;
+  sub st.2 five by st.4;
+  sub st.2 six by st.5;
+  sub st.2 seven by st.6;
+  sub st.2 eight by st.0;
+  sub st.2 nine by st.1;
+  sub st.3 zero by st.2;
+  sub st.3 one by st.3;
+  sub st.3 two by st.4;
+  sub st.3 three by st.5;
+  sub st.3 four by st.6;
+  sub st.3 five by st.0;
+  sub st.3 six by st.1;
+  sub st.3 seven by st.2;
+  sub st.3 eight by st.3;
+  sub st.3 nine by st.4;
+  sub st.4 zero by st.5;
+  sub st.4 one by st.6;
+  sub st.4 two by st.0;
+  sub st.4 three by st.1;
+  sub st.4 four by st.2;
+  sub st.4 five by st.3;
+  sub st.4 six by st.4;
+  sub st.4 seven by st.5;
+  sub st.4 eight by st.6;
+  sub st.4 nine by st.0;
+  sub st.5 zero by st.1;
+  sub st.5 one by st.2;
+  sub st.5 two by st.3;
+  sub st.5 three by st.4;
+  sub st.5 four by st.5;
+  sub st.5 five by st.6;
+  sub st.5 six by st.0;
+  sub st.5 seven by st.1;
+  sub st.5 eight by st.2;
+  sub st.5 nine by st.3;
+  sub st.6 zero by st.4;
+  sub st.6 one by st.5;
+  sub st.6 two by st.6;
+  sub st.6 three by st.0;
+  sub st.6 four by st.1;
+  sub st.6 five by st.2;
+  sub st.6 six by st.3;
+  sub st.6 seven by st.4;
+  sub st.6 eight by st.5;
+  sub st.6 nine by st.6;
+} step8;
+
+lookup render {
+  sub st.0 by zero;
+  sub st.1 by one;
+  sub st.2 by two;
+  sub st.3 by three;
+  sub st.4 by four;
+  sub st.5 by five;
+  sub st.6 by six;
+  sub seven by zero;
+  sub eight by one;
+  sub nine by two;
+} render;";
+name = mod7;
+}
+);
+features = (
+{
+code = "lookup calcState;
+lookup step1;
+lookup step2;
+lookup step3;
+lookup step4;
+lookup step5;
+lookup step6;
+lookup step7;
+lookup step8;
+lookup render;";
+labels = (
+{
+language = dflt;
+value = "";
+}
+);
+tag = ss01;
+}
+);
+fontMaster = (
+{
+id = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+metricValues = (
+{
+over = 16;
+pos = 800;
+},
+{
+over = 16;
+pos = 700;
+},
+{
+over = 16;
+pos = 500;
+},
+{
+over = -16;
+},
+{
+over = -16;
+pos = -200;
+},
+{
+}
+);
+name = Regular;
+userData = {
+GSCornerRadius = 47;
+};
+}
+);
+glyphs = (
+{
+glyphname = A;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 65;
+},
+{
+glyphname = B;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 66;
+},
+{
+glyphname = C;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 67;
+},
+{
+glyphname = D;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 68;
+},
+{
+glyphname = E;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 69;
+},
+{
+glyphname = F;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 70;
+},
+{
+glyphname = G;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 71;
+},
+{
+glyphname = H;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 72;
+},
+{
+glyphname = I;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 73;
+},
+{
+glyphname = J;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 74;
+},
+{
+glyphname = K;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 75;
+},
+{
+glyphname = L;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 76;
+},
+{
+glyphname = M;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 77;
+},
+{
+glyphname = N;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 78;
+},
+{
+glyphname = O;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 79;
+},
+{
+glyphname = P;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 80;
+},
+{
+glyphname = Q;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 81;
+},
+{
+glyphname = R;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 82;
+},
+{
+glyphname = S;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 83;
+},
+{
+glyphname = T;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 84;
+},
+{
+glyphname = U;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 85;
+},
+{
+glyphname = V;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 86;
+},
+{
+glyphname = W;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 87;
+},
+{
+glyphname = X;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 88;
+},
+{
+glyphname = Y;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 89;
+},
+{
+glyphname = Z;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 90;
+},
+{
+glyphname = a;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 97;
+},
+{
+glyphname = b;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 98;
+},
+{
+glyphname = c;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 99;
+},
+{
+glyphname = d;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 100;
+},
+{
+glyphname = e;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 101;
+},
+{
+glyphname = f;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 102;
+},
+{
+glyphname = g;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 103;
+},
+{
+glyphname = h;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 104;
+},
+{
+glyphname = i;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 105;
+},
+{
+glyphname = j;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 106;
+},
+{
+glyphname = k;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 107;
+},
+{
+glyphname = l;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 108;
+},
+{
+glyphname = m;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 109;
+},
+{
+glyphname = n;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 110;
+},
+{
+glyphname = o;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 111;
+},
+{
+glyphname = p;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 112;
+},
+{
+glyphname = q;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 113;
+},
+{
+glyphname = r;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 114;
+},
+{
+glyphname = s;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 115;
+},
+{
+glyphname = t;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 116;
+},
+{
+glyphname = u;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 117;
+},
+{
+glyphname = v;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 118;
+},
+{
+glyphname = w;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 119;
+},
+{
+glyphname = x;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 120;
+},
+{
+glyphname = y;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 121;
+},
+{
+glyphname = z;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 122;
+},
+{
+category = Letter;
+glyphname = st.0;
+lastChange = "2026-07-17 14:06:01 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 0;
+}
+);
+},
+{
+category = Letter;
+glyphname = st.1;
+lastChange = "2026-07-17 14:06:01 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 0;
+}
+);
+},
+{
+category = Letter;
+glyphname = st.2;
+lastChange = "2026-07-17 14:06:01 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 0;
+}
+);
+},
+{
+category = Letter;
+glyphname = st.3;
+lastChange = "2026-07-17 14:06:01 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 0;
+}
+);
+},
+{
+category = Letter;
+glyphname = st.4;
+lastChange = "2026-07-17 14:06:01 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 0;
+}
+);
+},
+{
+category = Letter;
+glyphname = st.5;
+lastChange = "2026-07-17 14:06:01 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 0;
+}
+);
+},
+{
+category = Letter;
+glyphname = st.6;
+lastChange = "2026-07-17 14:06:01 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 0;
+}
+);
+},
+{
+glyphname = zero;
+lastChange = "2026-07-17 13:40:48 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+shapes = (
+{
+attr = {
+strokeHeight = 36;
+strokeWidth = 40;
+};
+closed = 1;
+nodes = (
+(120,127,ls),
+(120,46,o),
+(164,2,o),
+(245,2,cs),
+(355,2,ls),
+(436,2,o),
+(480,46,o),
+(480,127,cs),
+(480,573,ls),
+(480,654,o),
+(436,698,o),
+(355,698,cs),
+(245,698,ls),
+(164,698,o),
+(120,654,o),
+(120,573,cs)
+);
+}
+);
+width = 600;
+}
+);
+unicode = 48;
+},
+{
+glyphname = one;
+lastChange = "2026-07-17 13:41:19 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+shapes = (
+{
+attr = {
+strokeHeight = 36;
+strokeWidth = 40;
+};
+closed = 0;
+nodes = (
+(347,18,l),
+(347,635,ls),
+(347,666,o),
+(330,682,o),
+(300,682,cs),
+(143,682,l)
+);
+},
+{
+attr = {
+strokeHeight = 36;
+strokeWidth = 40;
+};
+closed = 0;
+nodes = (
+(520,18,l),
+(80,18,l)
+);
+}
+);
+width = 600;
+}
+);
+unicode = 49;
+},
+{
+glyphname = two;
+lastChange = "2026-07-17 13:42:03 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+shapes = (
+{
+attr = {
+strokeHeight = 36;
+strokeWidth = 40;
+};
+closed = 0;
+nodes = (
+(120,529,l),
+(120,573,ls),
+(120,654,o),
+(164,698,o),
+(245,698,cs),
+(355,698,ls),
+(436,698,o),
+(480,654,o),
+(480,573,cs),
+(480,427,ls),
+(480,346,o),
+(436,302,o),
+(355,302,cs),
+(245,302,ls),
+(164,302,o),
+(120,258,o),
+(120,177,cs),
+(120,19,l),
+(520,19,l)
+);
+}
+);
+width = 600;
+}
+);
+unicode = 50;
+},
+{
+glyphname = three;
+lastChange = "2026-07-17 13:47:06 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+shapes = (
+{
+attr = {
+strokeHeight = 36;
+strokeWidth = 40;
+};
+closed = 0;
+nodes = (
+(270,379,l),
+(355,379,ls),
+(436,379,o),
+(480,335,o),
+(480,254,cs),
+(480,128,ls),
+(480,47,o),
+(436,3,o),
+(355,3,cs),
+(245,3,ls),
+(164,3,o),
+(120,47,o),
+(120,128,cs),
+(120,172,l)
+);
+},
+{
+attr = {
+strokeHeight = 36;
+strokeWidth = 40;
+};
+closed = 0;
+nodes = (
+(130,530,l),
+(130,574,ls),
+(130,655,o),
+(174,699,o),
+(255,699,cs),
+(355,699,ls),
+(436,699,o),
+(480,655,o),
+(480,574,cs),
+(480,508,ls),
+(480,427,o),
+(436,383,o),
+(355,383,cs),
+(270,383,l)
+);
+}
+);
+width = 600;
+}
+);
+unicode = 51;
+},
+{
+glyphname = four;
+lastChange = "2026-07-17 13:46:21 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+shapes = (
+{
+attr = {
+strokeHeight = 36;
+strokeWidth = 40;
+};
+closed = 0;
+nodes = (
+(480,700,l),
+(480,0,l)
+);
+},
+{
+attr = {
+strokeHeight = 36;
+strokeWidth = 40;
+};
+closed = 0;
+nodes = (
+(474,319,l),
+(245,319,ls),
+(164,319,o),
+(120,363,o),
+(120,444,cs),
+(120,700,l)
+);
+}
+);
+width = 600;
+}
+);
+unicode = 52;
+},
+{
+glyphname = five;
+lastChange = "2026-07-17 13:42:33 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+shapes = (
+{
+attr = {
+strokeHeight = 36;
+strokeWidth = 40;
+};
+closed = 0;
+nodes = (
+(490,682,l),
+(130,682,l),
+(130,442,ls),
+(130,414,o),
+(145,399,o),
+(173,399,cs),
+(355,399,ls),
+(436,399,o),
+(480,355,o),
+(480,274,cs),
+(480,128,ls),
+(480,47,o),
+(436,3,o),
+(355,3,cs),
+(245,3,ls),
+(164,3,o),
+(120,47,o),
+(120,128,cs),
+(120,172,l)
+);
+}
+);
+width = 600;
+}
+);
+unicode = 53;
+},
+{
+glyphname = six;
+lastChange = "2026-07-17 13:46:43 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+shapes = (
+{
+attr = {
+strokeHeight = 36;
+strokeWidth = 40;
+};
+closed = 1;
+nodes = (
+(120,127,ls),
+(120,46,o),
+(164,2,o),
+(245,2,cs),
+(355,2,ls),
+(436,2,o),
+(480,46,o),
+(480,127,cs),
+(480,273,ls),
+(480,354,o),
+(436,398,o),
+(355,398,cs),
+(245,398,ls),
+(164,398,o),
+(120,354,o),
+(120,273,cs)
+);
+},
+{
+attr = {
+strokeHeight = 36;
+strokeWidth = 40;
+};
+closed = 0;
+nodes = (
+(480,546,l),
+(480,573,ls),
+(480,654,o),
+(436,698,o),
+(355,698,cs),
+(245,698,ls),
+(164,698,o),
+(120,654,o),
+(120,573,cs),
+(120,277,l)
+);
+}
+);
+width = 600;
+}
+);
+unicode = 54;
+},
+{
+glyphname = seven;
+lastChange = "2026-07-17 13:45:00 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+shapes = (
+{
+attr = {
+lineCapEnd = 4;
+strokeHeight = 36;
+strokeWidth = 40;
+};
+closed = 0;
+nodes = (
+(120,573,l),
+(120,643,ls),
+(120,675,o),
+(143,698,o),
+(175,698,cs),
+(425,698,ls),
+(457,698,o),
+(480,675,o),
+(480,643,cs),
+(480,594,ls),
+(480,569,o),
+(465,535,o),
+(455,514,cs),
+(219,0,l)
+);
+}
+);
+width = 600;
+}
+);
+unicode = 55;
+},
+{
+glyphname = eight;
+lastChange = "2026-07-17 13:43:01 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+shapes = (
+{
+attr = {
+strokeHeight = 36;
+strokeWidth = 40;
+};
+closed = 1;
+nodes = (
+(120,127,ls),
+(120,46,o),
+(164,2,o),
+(245,2,cs),
+(355,2,ls),
+(436,2,o),
+(480,46,o),
+(480,127,cs),
+(480,273,ls),
+(480,354,o),
+(436,398,o),
+(355,398,cs),
+(245,398,ls),
+(164,398,o),
+(120,354,o),
+(120,273,cs)
+);
+},
+{
+attr = {
+strokeHeight = 36;
+strokeWidth = 40;
+};
+closed = 1;
+nodes = (
+(120,523,ls),
+(120,442,o),
+(164,398,o),
+(245,398,cs),
+(355,398,ls),
+(436,398,o),
+(480,442,o),
+(480,523,cs),
+(480,573,ls),
+(480,654,o),
+(436,698,o),
+(355,698,cs),
+(245,698,ls),
+(164,698,o),
+(120,654,o),
+(120,573,cs)
+);
+}
+);
+width = 600;
+}
+);
+unicode = 56;
+},
+{
+glyphname = nine;
+lastChange = "2026-07-17 13:46:59 +0000";
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+shapes = (
+{
+angle = 180;
+pos = (600,700);
+ref = six;
+}
+);
+width = 600;
+}
+);
+unicode = 57;
+},
+{
+glyphname = space;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 200;
+}
+);
+unicode = 32;
+},
+{
+glyphname = period;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 46;
+},
+{
+glyphname = comma;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 44;
+},
+{
+glyphname = hyphen;
+layers = (
+{
+layerId = "B2CA4289-EB36-42DB-AEC8-C27CB067EEB5";
+width = 600;
+}
+);
+unicode = 45;
+}
+);
+metrics = (
+{
+type = ascender;
+},
+{
+type = "cap height";
+},
+{
+type = "x-height";
+},
+{
+type = baseline;
+},
+{
+type = descender;
+},
+{
+type = "italic angle";
+}
+);
+unitsPerEm = 1000;
+versionMajor = 1;
+versionMinor = 5;
+}
